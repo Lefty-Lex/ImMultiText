@@ -7,12 +7,12 @@ Example
 ![Example](https://i.postimg.cc/4NBvk8mV/image.png)
 
 Usage
-
+```cpp
     		ImMultiText::text() << ImColor(255,0,255,255) << "First line " << ImMultiText::endl <<
-				ImColor(0,255,255,255) << getFont("Verdana", 18) << "Second line " <<
-				getFont("Verdana", 14) << ImMultiText::endl << ImColor(255,0,0,255) << "Third line" <<
-				ImMultiText::Image(myImage, ImVec2(15,15)) << " << thats a image";
-
+			ImColor(0,255,255,255) << getFont("Verdana", 18) << "Second line " <<
+			getFont("Verdana", 14) << ImMultiText::endl << ImColor(255,0,0,255) << "Third line" <<
+			ImMultiText::Image(myImage, ImVec2(15,15)) << " << thats a image";
+```
 ## Features
 
  - Combine strings with integers, floats, doubles and more !
@@ -24,11 +24,12 @@ Usage
 Make sure to include ImMultiText.h
 
 First you must retrieve an instance of MultiText by calling ImMultiText like so:
-
+```cpp
     ImMultiText()
+```
 
 Then you simply use the << operator to append the functionality you like, options include:
-
+```cpp
     << [color] /*supports ImColor and ImVec4*/;
     
     << [text] /*supports const char* and strings*/;
@@ -42,6 +43,6 @@ Then you simply use the << operator to append the functionality you like, option
     << ImMultiText::endl /*creates a new line*/;
     
     << ImMultiText::setPrecision(int) /*sets the precision for floating point numbers);
-    
+```
 ## discord 
 PEPPAPEEPO#3123
