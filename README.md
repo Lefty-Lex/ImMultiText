@@ -13,6 +13,27 @@ Usage
 			getFont("Verdana", 14) << ImMultiText::endl << ImColor(255,0,0,255) << "Third line" <<
 			ImMultiText::Image(myImage, ImVec2(15,15)) << " << thats a image";
 ```
+
+The above code without using this header file would typcally look like this below
+
+```cpp
+	ImGui::PushStyleColor(ImGuiCol_Text, ImColor(255, 0, 255, 255).Value);
+	ImGui::Text("First line ");
+	ImGui::PopStyleColor();
+	ImGui::PushStyleColor(ImGuiCol_Text, ImColor(0, 255, 255, 255).Value);
+	ImGui::PushFont(getFont("Verdana", 18));
+	ImGui::Text("Second line ");
+	ImGui::PopStyleColor();
+	ImGui::PopFont();
+	ImGui::PushFont(getFont("Verdana", 14));
+	ImGui::PushStyleColor(ImGuiCol_Text, ImColor(255, 0, 0, 255).Value);
+	ImGui::Text("Third line");
+	ImGui::Image(myImage, ImVec2(15, 15));
+	ImGui::Text(" << thats a image");
+	ImGui::PopStyleColor();
+	ImGui::PopFont();
+```
+
 ## Features
 
  - Combine strings with integers, floats, doubles and more !
