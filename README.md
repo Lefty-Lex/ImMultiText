@@ -21,6 +21,8 @@ Usage
  - You can even display images along side your text !
 
 ## How to use
+Make sure to include ImMultiText.h
+
 First you must retrieve an instance of MultiText by calling ImMultiText like so:
 
     ImMultiText()
